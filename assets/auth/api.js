@@ -64,6 +64,6 @@ module.exports = {
   signIn,
   changePassword,
   signOut,
-  getTeams,
-  clearTeams
+  getTeams
+  // clearTeams
 }
