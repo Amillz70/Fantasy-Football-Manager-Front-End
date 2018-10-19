@@ -58,7 +58,7 @@ module.exports = {
   onSignIn,
   onChangePassword,
   onSignOut,
-  onGetTeams,
-  onClearTeams,
-  updateTeams
+  onGetTeams
+  // onClearTeams,
+  // updateTeams
 }
