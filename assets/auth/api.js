@@ -39,9 +39,31 @@ const signOut = function () {
   })
 }
 
+const getTeams = function () {
+  return $.ajax({
+    url: config.apiUrl + '/teams',
+    method: 'GET',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
+  })
+}
+
+// const clearTeams = function () {
+//   return $.ajax({
+//     url: config.apiUrl + '/teams',
+//     headers: {
+//       Authorization: `Token token=${store.user.token}`
+//     },
+//     method: 'DELETE'
+//   })
+// }
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  getTeams,
+  clearTeams
 }

@@ -11,7 +11,11 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignIn) // .hide()
   $('#change-password-form').on('submit', authEvents.onChangePassword) // .hide()
   $('#sign-out-button').on('click', authEvents.onSignOut) // .hide()
+  $('#get-data').on('click', authEvents.onGetTeams) // .hide()
+  // $('#clear-data').on('click', authEvents.onClearTeams) // .hide()
 
   $('#change-password-form').hide()
   $('#sign-out-button').hide()
+  $('#get-data').hide()
+  $('#clear-data').hide()
 })

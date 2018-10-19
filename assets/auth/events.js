@@ -30,15 +30,35 @@ const onChangePassword = function (event) {
 }
 
 const onSignOut = function () {
-  event.preventDefault()
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
 
+const onGetTeams = function () {
+  api.getTeams()
+    .then(ui.getTeamSuccess)
+    .catch(ui.getTeamFailure)
+}
+
+// const onClearTeams = function () {
+//   api.clearTeams()
+//     .then(ui.signOutSuccess)
+//     .catch(ui.signOutFailure)
+// }
+//
+// const updateTeams = function () {
+//   api.updateTeams()
+//     .then(ui.signOutSuccess)
+//     .catch(ui.signOutFailure)
+// }
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onGetTeams,
+  onClearTeams,
+  updateTeams
 }

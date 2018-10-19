@@ -24,11 +24,8 @@ const signInSuccess = function (response) {
   $('#sign-up-form').hide()
   $('#sign-in-form').hide()
   $('#change-password-form').show()
-  $('#tic').show()
   $('#sign-out-button').show()
-  $('#reset').show()
-  $('#count-games-button').show()
-  $('#count-game-display').show()
+  $('#get-data').show()
 }
 
 const signInFailure = function () {
@@ -59,14 +56,12 @@ const signOutSuccess = function () {
   $('#sign-up-form').show()
   $('#sign-in-form').show()
   $('#change-password-form').hide()
-  $('#tic').hide()
   $('#sign-out-button').hide()
-  $('#reset').hide()
   $('#count-games-button').hide()
   $('#count-game-display').hide()
+  $('#get-data').hide()
   // $('#change-password-form').clear()
   $('#change-password-form').trigger('reset')
-  $('#tic').trigger('reset')
 }
 
 const signOutFailure = function () {
@@ -75,20 +70,19 @@ const signOutFailure = function () {
   $('#change-password-form').trigger('reset')
 }
 
+const getTeamSuccess = function () {
+  $('#list-teams').html('Team List')
+  $('#list-teams').css('color', 'blue')
+}
 
-// const startNewGameSuccess = function() {
-//
+// const getTeamSuccess = function () {
+//   $('#display-message').html('Team List')
+//   $('#display-message').css('color', 'blue')
 // }
 //
-// const startNewGameFailure = function() {
-//
-// }
-// const oddMove = function () {
-//   $('display-message').html('Xs move')
-// }
-//
-// const evenMove = function () {
-//   $('display-message').html('Os move')
+// const getTeamSuccess = function () {
+//   $('#display-message').html('Team List')
+//   $('#display-message').css('color', 'blue')
 // }
 
 module.exports = {
@@ -99,5 +93,6 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  getTeamSuccess
 }
