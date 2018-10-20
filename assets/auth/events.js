@@ -45,7 +45,7 @@ const onCreateTeams = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
   // console.log('data is', data)
-  api.createTeams()
+  api.createTeams(data)
     .then(ui.createTeamsSuccess)
     .catch(ui.createTeamsFailure)
 }
