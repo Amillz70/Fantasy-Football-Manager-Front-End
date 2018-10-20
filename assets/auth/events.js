@@ -41,11 +41,20 @@ const onGetTeams = function () {
     .catch(ui.getTeamFailure)
 }
 
-// const onClearTeams = function () {
-//   api.clearTeams()
-//     .then(ui.signOutSuccess)
-//     .catch(ui.signOutFailure)
-// }
+const onCreateTeams = function (event) {
+  event.preventDefault()
+  const data = getFormFields(this)
+  // console.log('data is', data)
+  api.createTeams()
+    .then(ui.createTeamsSuccess)
+    .catch(ui.createTeamsFailure)
+}
+
+const onClearTeams = function () {
+  api.clearTeams()
+    .then(ui.clearTeamsSuccess)
+    .catch(ui.clearTeamsFailure)
+}
 //
 // const updateTeams = function () {
 //   api.updateTeams()
@@ -58,7 +67,8 @@ module.exports = {
   onSignIn,
   onChangePassword,
   onSignOut,
-  onGetTeams
-  // onClearTeams,
+  onGetTeams,
+  onCreateTeams,
+  onClearTeams
   // updateTeams
 }

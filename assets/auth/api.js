@@ -49,21 +49,34 @@ const getTeams = function () {
   })
 }
 
-// const clearTeams = function () {
-//   return $.ajax({
-//     url: config.apiUrl + '/teams',
-//     headers: {
-//       Authorization: `Token token=${store.user.token}`
-//     },
-//     method: 'DELETE'
-//   })
-// }
+const createTeams = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/teams',
+    method: 'POST',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const clearTeams = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/teams/' + id,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'DELETE'
+  })
+}
 
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  getTeams
-  // clearTeams
+  getTeams,
+  createTeams,
+  clearTeams
 }

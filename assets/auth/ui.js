@@ -26,6 +26,8 @@ const signInSuccess = function (response) {
   $('#change-password-form').show()
   $('#sign-out-button').show()
   $('#get-data').show()
+  $('#list-teams').show()
+  $('#create-team').show()
 }
 
 const signInFailure = function () {
@@ -60,6 +62,8 @@ const signOutSuccess = function () {
   $('#count-games-button').hide()
   $('#count-game-display').hide()
   $('#get-data').hide()
+  $('#list-teams').hide()
+  $('#create-team').hide()
   // $('#change-password-form').clear()
   $('#change-password-form').trigger('reset')
 }
@@ -73,6 +77,20 @@ const signOutFailure = function () {
 const getTeamSuccess = function () {
   $('#list-teams').html('Team List')
   $('#list-teams').css('color', 'blue')
+}
+
+const getTeamFailure = function () {
+  $('display-message').html('Something wwent wrong with server')
+  $('display-message').css('color', 'red')
+}
+
+const createTeamsSuccess = function () {
+  $('#list-teams').html('Create Team test')
+}
+
+const createTeamsFailure = function () {
+  $('#list-teams').html('Create Team failed')
+  $('#list-teams').css('color', 'red')
 }
 
 // const getTeamSuccess = function () {
@@ -94,5 +112,8 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure,
-  getTeamSuccess
+  getTeamSuccess,
+  getTeamFailure,
+  createTeamsSuccess,
+  createTeamsFailure
 }
