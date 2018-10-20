@@ -51,7 +51,7 @@ const getTeams = function () {
 
 const createTeams = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/teams',
+    url: config.apiUrl + '/teams',
     method: 'POST',
     headers: {
       contentType: 'application/json',
