@@ -1,4 +1,4 @@
-
+curl 
 
 const createTeams = function (data) {
   return $.ajax({
