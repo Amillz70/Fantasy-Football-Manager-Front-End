@@ -1,6 +1,7 @@
 {{#each teams as |team|}}
 
 <ul data-id="{{team.id}}">
+  <section data-id="{{team.id}}">
   <li>Team:
     {{#if team.name}}
       {{team.name}}
@@ -8,6 +9,10 @@
       No team listed yet.
     {{/if}}
   </li>
+
+  <ul>
+    <button type="button" data-id="{{team.id}}" class="clear-team-button">Remove Team</button>
+  </ul>
 
 </ul>
 

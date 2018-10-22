@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Time for Football!</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,8 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
-      <h1>Adam's Tic-Tac-Toe Game</h1>
+      <h1>Adam's Fantasy Football Manager</h1>
 <h3 id="display-message"></h3>
 <h3 id="second-display-message"></h3>
 <!-- <h3 id="end-game-message"></h3> -->
@@ -41,23 +40,26 @@
        </form>
       <br>
 
-      <button id="sign-out-button" class="hidden-sign-in"> Sign Out </button>
+      <button id="sign-out-button"> Sign Out </button>
       <br>
 
-      <button id="get-data" class="hidden-sign-in"> Get Teams </button>
+      <button id="get-data"> Get Teams </button>
       <br>
 
-      <button id="clear-data" class="hidden-sign-in"> Clear </button>
-      <br>
+      <form id="clear-data">
+        <legend> Delete a Team? </legend>
+        <input required placeholder="Team Name" name="team[name]" type="name"/>
+        <input type="submit" />
+      </form>
 
-      <form id="create-team" class="hidden-sign-out">
+      <form id="create-team">
         <legend> Make a New Team! </legend>
         <input required placeholder="Team Name" name="team[name]" type="name"/>
         <input type="submit" />
       </form>
 
 
-      <div id="content" class="content"></div
+      <div id="content" class="list-content"></div>
       <h3 id="list-teams"></h3>
       <br>
 

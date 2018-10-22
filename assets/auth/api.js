@@ -65,6 +65,7 @@ const clearTeams = function (id) {
   return $.ajax({
     url: config.apiUrl + '/teams/' + id,
     headers: {
+      contentType: 'application/json',
       Authorization: `Token token=${store.user.token}`
     },
     method: 'DELETE'

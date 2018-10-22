@@ -18,7 +18,6 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (response) {
-//  $('#squareZero').html('Sign in successful, Game start')
   $('#display-message').html('Sign in successful')
   $('#display-message').css('color', 'green')
   $('#sign-in-form').trigger('reset')
@@ -30,6 +29,7 @@ const signInSuccess = function (response) {
   $('#get-data').show()
   $('#list-teams').show()
   $('#create-team').show()
+  $('#clear-data').show()
 }
 
 const signInFailure = function () {
@@ -66,6 +66,7 @@ const signOutSuccess = function () {
   $('#get-data').hide()
   $('#list-teams').hide()
   $('#create-team').hide()
+  $('#clear-data').hide()
   // $('#change-password-form').clear()
   $('#change-password-form').trigger('reset')
 }
@@ -77,8 +78,8 @@ const signOutFailure = function () {
 }
 
 const getTeamSuccess = function (data) {
-  $('#list-teams').html('Team List')
-  $('#list-teams').css('color', 'blue')
+  // $('#list-teams').html('Team List')
+  // $('#list-teams').css('color', 'blue')
   const showTeamsHtml = showTeamsTemplate({ teams: data.teams })
   $('#content').html(showTeamsHtml)
 }
@@ -99,19 +100,21 @@ const createTeamsFailure = function () {
 }
 
 const clearTeamsSuccess = function () {
-
+  $('#list-teams').html('Deleted team')
 }
 
 const clearTeamsFailure = function () {
-
+  $('#list-teams').html('Failed to Delete Team')
+  $('#list-teams').css('color', 'red')
 }
 
 const updateTeamSuccess = function () {
-
+$('#list-teams').html('Updated team')
 }
 
 const updateTeamFailure = function () {
-
+  $('#list-teams').html('Failed to Update Team')
+  $('#list-teams').css('color', 'red')
 }
 
 module.exports = {

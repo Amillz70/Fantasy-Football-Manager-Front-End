@@ -41,19 +41,27 @@ const onGetTeams = function () {
     .catch(ui.getTeamFailure)
 }
 
-const onCreateTeams = function (event) {
+const onCreateTeam = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
   // console.log('data is', data)
   api.createTeams(data)
-    .then(ui.createTeamsSuccess)
-    .catch(ui.createTeamsFailure)
+    .then(ui.createTeamSuccess)
+    .catch(ui.createTeamFailure)
 }
 
-const onClearTeams = function () {
-  api.clearTeams()
-    .then(ui.clearTeamsSuccess)
-    .catch(ui.clearTeamsFailure)
+const onClearTeam = function (event) {
+  event.preventDefault()
+  const id = $(event.target).attr('data-id')
+  // console.log(id)
+  // console.log(event.target)
+  // const getTeamElement = '[data-id=' + id + ']'
+  // $(getTeamElement).empty()
+  if ($(event.target).attr('class') === 'clear-team-button') {
+    api.clearTeams(id)
+      .then(ui.clearTeamSuccess)
+      .catch(ui.clearTeamFailure)
+  }
 }
 
 const updateTeams = function () {
@@ -64,8 +72,8 @@ const updateTeams = function () {
 
 const addHandlers = () => {
 $('#get-data').on('click', onGetTeams)
-$('#create-team').on('click', onCreateTeams)
-$('#clear-data').on('click', onClearTeams)
+$('#create-team').on('click', onCreateTeam)
+$('#content').on('click', onClearTeam)
 // $('#create-team').on('click', updateTeams)
 }
 
