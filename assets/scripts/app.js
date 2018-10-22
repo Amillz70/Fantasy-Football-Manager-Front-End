@@ -21,4 +21,6 @@ $(() => {
   $('#clear-data').hide()
   $('#list-teams').hide()
   $('#create-team').hide()
+
+  authEvents.addHandlers()
 })

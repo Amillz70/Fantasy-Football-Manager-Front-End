@@ -1,0 +1,14 @@
+{{#each teams as |team|}}
+
+<ul data-id="{{team.id}}">
+  <li>Team:
+    {{#if team.name}}
+      {{team.name}}
+    {{else}}
+      No team listed yet.
+    {{/if}}
+  </li>
+
+</ul>
+
+{{/each}}

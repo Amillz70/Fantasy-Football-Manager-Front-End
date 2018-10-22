@@ -3,6 +3,8 @@
 
 const store = require('../scripts/store.js')
 
+const showTeamsTemplate = require('../scripts/helpers/team-listing.handlebars')
+
 const signUpSuccess = function () {
   $('#display-message').html('Sign up successful')
   $('#display-message').css('color', 'green')
@@ -74,9 +76,11 @@ const signOutFailure = function () {
   $('#change-password-form').trigger('reset')
 }
 
-const getTeamSuccess = function () {
+const getTeamSuccess = function (data) {
   $('#list-teams').html('Team List')
   $('#list-teams').css('color', 'blue')
+  const showTeamsHtml = showTeamsTemplate({ teams: data.teams })
+  $('#content').html(showTeamsHtml)
 }
 
 const getTeamFailure = function () {

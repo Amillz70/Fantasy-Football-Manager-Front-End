@@ -62,13 +62,21 @@ const updateTeams = function () {
     .catch(ui.updateTeamFailure)
 }
 
+const addHandlers = () => {
+$('#get-data').on('click', onGetTeams)
+$('#create-team').on('click', onCreateTeams)
+$('#clear-data').on('click', onClearTeams)
+// $('#create-team').on('click', updateTeams)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut,
-  onGetTeams,
-  onCreateTeams,
-  onClearTeams,
-  updateTeams
+  // onGetTeams,
+  // onCreateTeams,
+  // onClearTeams,
+  updateTeams,
+  addHandlers
 }
