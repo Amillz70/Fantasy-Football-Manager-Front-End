@@ -86,6 +86,7 @@ const getTeamFailure = function () {
 
 const createTeamsSuccess = function () {
   $('#list-teams').html('Create Team test')
+  // const showAllTeams =
 }
 
 const createTeamsFailure = function () {
@@ -93,15 +94,21 @@ const createTeamsFailure = function () {
   $('#list-teams').css('color', 'red')
 }
 
-// const getTeamSuccess = function () {
-//   $('#display-message').html('Team List')
-//   $('#display-message').css('color', 'blue')
-// }
-//
-// const getTeamSuccess = function () {
-//   $('#display-message').html('Team List')
-//   $('#display-message').css('color', 'blue')
-// }
+const clearTeamsSuccess = function () {
+
+}
+
+const clearTeamsFailure = function () {
+
+}
+
+const updateTeamSuccess = function () {
+
+}
+
+const updateTeamFailure = function () {
+
+}
 
 module.exports = {
   signUpSuccess,
@@ -115,5 +122,9 @@ module.exports = {
   getTeamSuccess,
   getTeamFailure,
   createTeamsSuccess,
-  createTeamsFailure
+  createTeamsFailure,
+  clearTeamsSuccess,
+  clearTeamsFailure,
+  updateTeamSuccess,
+  updateTeamFailure
 }

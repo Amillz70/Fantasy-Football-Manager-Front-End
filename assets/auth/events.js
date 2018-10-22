@@ -55,12 +55,12 @@ const onClearTeams = function () {
     .then(ui.clearTeamsSuccess)
     .catch(ui.clearTeamsFailure)
 }
-//
-// const updateTeams = function () {
-//   api.updateTeams()
-//     .then(ui.signOutSuccess)
-//     .catch(ui.signOutFailure)
-// }
+
+const updateTeams = function () {
+  api.updateTeams()
+    .then(ui.updateTeamSuccess)
+    .catch(ui.updateTeamFailure)
+}
 
 module.exports = {
   onSignUp,
@@ -69,6 +69,6 @@ module.exports = {
   onSignOut,
   onGetTeams,
   onCreateTeams,
-  onClearTeams
-  // updateTeams
+  onClearTeams,
+  updateTeams
 }

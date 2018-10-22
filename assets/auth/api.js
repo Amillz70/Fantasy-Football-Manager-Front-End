@@ -71,6 +71,19 @@ const clearTeams = function (id) {
   })
 }
 
+const updateTeams = function (id, data) {
+  return $.ajax({
+    url: config.apiUrl + '/teams/' + id,
+    method: 'PATCH',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+
 module.exports = {
   signUp,
   signIn,
@@ -78,5 +91,6 @@ module.exports = {
   signOut,
   getTeams,
   createTeams,
-  clearTeams
+  clearTeams,
+  updateTeams
 }
