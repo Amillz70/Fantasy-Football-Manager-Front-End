@@ -64,17 +64,24 @@ const onClearTeam = function (event) {
   }
 }
 
-const updateTeams = function () {
-  api.updateTeams()
-    .then(ui.updateTeamSuccess)
-    .catch(ui.updateTeamFailure)
+const updateTeams = function (event) {
+  event.preventDefault()
+
+  const id = $(event.target).attr('data-id')
+  const data = getFormFields(this)
+
+  if ($(event.target).attr('class') === 'update-team-button') {
+    api.updateTeams(id, data)
+      .then(ui.updateTeamSuccess)
+      .catch(ui.updateTeamFailure)
+  }
 }
 
 const addHandlers = () => {
 $('#get-data').on('click', onGetTeams)
 $('#create-team').on('click', onCreateTeam)
 $('#content').on('click', onClearTeam)
-// $('#create-team').on('click', updateTeams)
+$('#content').on('click', updateTeams)
 }
 
 module.exports = {
@@ -85,6 +92,6 @@ module.exports = {
   // onGetTeams,
   // onCreateTeams,
   // onClearTeams,
-  updateTeams,
+  // updateTeams,
   addHandlers
 }

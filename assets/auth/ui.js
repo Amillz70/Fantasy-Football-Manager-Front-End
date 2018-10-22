@@ -30,6 +30,7 @@ const signInSuccess = function (response) {
   $('#list-teams').show()
   $('#create-team').show()
   $('#clear-data').show()
+  $('#content').show()
 }
 
 const signInFailure = function () {
@@ -67,6 +68,7 @@ const signOutSuccess = function () {
   $('#list-teams').hide()
   $('#create-team').hide()
   $('#clear-data').hide()
+  $('#content').hide()
   // $('#change-password-form').clear()
   $('#change-password-form').trigger('reset')
 }
@@ -110,6 +112,7 @@ const clearTeamsFailure = function () {
 
 const updateTeamSuccess = function () {
 $('#list-teams').html('Updated team')
+$('#get-data').click()
 }
 
 const updateTeamFailure = function () {

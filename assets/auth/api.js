@@ -84,7 +84,6 @@ const updateTeams = function (id, data) {
   })
 }
 
-
 module.exports = {
   signUp,
   signIn,
