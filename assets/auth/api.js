@@ -73,6 +73,7 @@ const clearTeams = function (id) {
 }
 
 const updateTeams = function (id, data) {
+//  console.log(data)
   return $.ajax({
     url: config.apiUrl + '/teams/' + id,
     method: 'PATCH',

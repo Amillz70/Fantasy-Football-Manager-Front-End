@@ -69,6 +69,7 @@ const updateTeams = function (event) {
 
   const id = $(event.target).attr('data-id')
   const data = getFormFields(this)
+  // console.log(data)
 
   if ($(event.target).attr('class') === 'update-team-button') {
     api.updateTeams(id, data)
@@ -79,9 +80,9 @@ const updateTeams = function (event) {
 
 const addHandlers = () => {
 $('#get-data').on('click', onGetTeams)
-$('#create-team').on('click', onCreateTeam)
+$('#create-team').on('submit', onCreateTeam)
 $('#content').on('click', onClearTeam)
-$('#content').on('click', updateTeams)
+$('.update-form').on('submit', updateTeams)
 }
 
 module.exports = {

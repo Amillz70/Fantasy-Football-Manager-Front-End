@@ -102,7 +102,7 @@ const createTeamsFailure = function () {
 }
 
 const clearTeamsSuccess = function () {
-  $('#list-teams').html('Deleted team')
+  $('#display-message').html('Deleted team')
 }
 
 const clearTeamsFailure = function () {
