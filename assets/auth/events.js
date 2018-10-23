@@ -101,6 +101,6 @@ module.exports = {
   // onGetTeams,
   // onCreateTeams,
   // onClearTeams,
-  updateTeams,
+  // updateTeams,
   addHandlers
 }
