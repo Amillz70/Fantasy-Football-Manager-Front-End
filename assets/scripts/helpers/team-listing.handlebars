@@ -14,9 +14,9 @@
     <button type="button" data-id="{{team.id}}" class="clear-team-button">Remove Team</button>
   </ul>
 
-  <form class="update-form">
+  <form class="update-form" data-id="{{team.id}}">
     <input type="text" class="update-team-button"  name="team[name]" required placeholder="Update Name?">
-    <button type="submit" data-id="{{team.id}}" class="update-team-button">Update Team</button>
+    <input type="submit" data-id="{{team.id}}" class="update-team-button">Update Team</input>
   </form>
 
 

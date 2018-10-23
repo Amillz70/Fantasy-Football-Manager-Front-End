@@ -12,9 +12,8 @@ $(() => {
   $('#change-password-form').on('submit', authEvents.onChangePassword) // .hide()
   $('#sign-out-button').on('click', authEvents.onSignOut) // .hide()
   $('#get-data').on('click', authEvents.onGetTeams) // .hide()
-  $('#create-team').on('submit', authEvents.onCreateTeam)
+  // $('#content').on('submit', '.update-form', authEvents.updateTeams)
   // $('#clear-data').on('submit', authEvents.onClearTeam)
-  // $('.update-form').on('submit', authEvents.updateTeams)
   // $('#clear-data').on('click', authEvents.onClearTeams) // .hide()
 
   $('#change-password-form').hide()

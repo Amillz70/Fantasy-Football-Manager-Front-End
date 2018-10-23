@@ -84,6 +84,10 @@ const getTeamSuccess = function (data) {
   // $('#list-teams').css('color', 'blue')
   const showTeamsHtml = showTeamsTemplate({ teams: data.teams })
   $('#content').html(showTeamsHtml)
+  $('.update-form').on('submit', (e) => {
+    e.preventDefault()
+    console.log('update teams')
+  })
 }
 
 const getTeamFailure = function () {

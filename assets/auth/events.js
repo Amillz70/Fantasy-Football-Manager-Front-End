@@ -66,23 +66,22 @@ const onClearTeam = function (event) {
 
 const updateTeams = function (event) {
   event.preventDefault()
-
   const id = $(event.target).attr('data-id')
   const data = getFormFields(event.target)
   console.log(data)
 
-  if ($(event.target).attr('class') === 'update-team-button') {
-    api.updateTeams(id, data)
-      .then(ui.updateTeamSuccess)
-      .catch(ui.updateTeamFailure)
-  }
+  // if ($(event.target).attr('class') === 'update-team-button') {
+  api.updateTeams(id, data)
+    .then(ui.updateTeamSuccess)
+    .catch(ui.updateTeamFailure)
+  // }
 }
 
 const addHandlers = () => {
-$('#get-data').on('click', onGetTeams)
-$('#create-team').on('submit', onCreateTeam)
-$('#content').on('click', onClearTeam)
-$('#content').on('click', 'button', updateTeams)
+  $('#get-data').on('click', onGetTeams)
+  $('#create-team').on('submit', onCreateTeam)
+  $('#content').on('click', '.clear-team-button', onClearTeam)
+  $('#content').on('submit', '.update-form', updateTeams)
 }
 
 module.exports = {
@@ -93,6 +92,6 @@ module.exports = {
   // onGetTeams,
   // onCreateTeams,
   // onClearTeams,
-  // updateTeams,
+  updateTeams,
   addHandlers
 }
