@@ -31,6 +31,7 @@ const signInSuccess = function (response) {
   $('#create-team').show()
   $('#clear-data').show()
   $('#content').show()
+  $('#get-team').show()
 }
 
 const signInFailure = function () {
@@ -69,6 +70,7 @@ const signOutSuccess = function () {
   $('#create-team').hide()
   $('#clear-data').hide()
   $('#content').hide()
+  $('#get-team').hide()
   // $('#change-password-form').clear()
   $('#change-password-form').trigger('reset')
   $('#sign-out-button').trigger('reset')
@@ -87,11 +89,27 @@ const signOutFailure = function () {
   $('#change-password-form').trigger('reset')
 }
 
-const getTeamSuccess = function (data) {
+const getTeamsSuccess = function (data) {
   // $('#list-teams').html('Team List')
   // $('#list-teams').css('color', 'blue')
   const showTeamsHtml = showTeamsTemplate({ teams: data.teams })
   $('#content').html(showTeamsHtml)
+  $('.update-form').on('submit', (e) => {
+    e.preventDefault()
+    // console.log('update teams')
+  })
+}
+
+const getTeamsFailure = function () {
+  $('#second-display-message').html('Something wwent wrong with server')
+  $('#second-display-message').css('color', 'red')
+}
+
+const getTeamSuccess = function (data) {
+  // console.log(data)
+  // const showTeamsHtml = showTeamsTemplate({ teams: data.teams })
+  store.team = data.team
+  $('#content').html(`${store.team.name} is found`)
   $('.update-form').on('submit', (e) => {
     e.preventDefault()
     // console.log('update teams')
@@ -141,6 +159,8 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure,
+  getTeamsSuccess,
+  getTeamsFailure,
   getTeamSuccess,
   getTeamFailure,
   createTeamSuccess,

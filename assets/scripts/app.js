@@ -23,6 +23,7 @@ $(() => {
   $('#list-teams').hide()
   $('#create-team').hide()
   $('#content').hide()
+  $('#get-team').hide()
 
   authEvents.addHandlers()
 })

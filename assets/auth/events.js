@@ -37,6 +37,14 @@ const onSignOut = function () {
 
 const onGetTeams = function () {
   api.getTeams()
+    .then(ui.getTeamsSuccess)
+    .catch(ui.getTeamsFailure)
+}
+
+const onGetTeam = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.getTeam(data)
     .then(ui.getTeamSuccess)
     .catch(ui.getTeamFailure)
 }
@@ -79,6 +87,7 @@ const updateTeams = function (event) {
 
 const addHandlers = () => {
   $('#get-data').on('click', onGetTeams)
+  $('#get-team').on('submit', onGetTeam)
   $('#create-team').on('submit', onCreateTeam)
   $('#content').on('click', '.clear-team-button', onClearTeam)
   $('#content').on('submit', '.update-form', updateTeams)
