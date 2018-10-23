@@ -101,7 +101,7 @@ const getTeamsSuccess = function (data) {
 }
 
 const getTeamsFailure = function () {
-  $('#second-display-message').html('Something wwent wrong with server')
+  $('#second-display-message').html('Something went wrong with server')
   $('#second-display-message').css('color', 'red')
 }
 
@@ -117,7 +117,7 @@ const getTeamSuccess = function (data) {
 }
 
 const getTeamFailure = function () {
-  $('#second-display-message').html('Something wwent wrong with server')
+  $('#second-display-message').html('Something went wrong with server')
   $('#second-display-message').css('color', 'red')
 }
 
