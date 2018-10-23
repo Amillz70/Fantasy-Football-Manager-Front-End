@@ -13,7 +13,8 @@ $(() => {
   $('#sign-out-button').on('click', authEvents.onSignOut) // .hide()
   $('#get-data').on('click', authEvents.onGetTeams) // .hide()
   $('#create-team').on('submit', authEvents.onCreateTeam)
-  $('#clear-data').on('submit', authEvents.onClearTeam)
+  // $('#clear-data').on('submit', authEvents.onClearTeam)
+  // $('.update-form').on('submit', authEvents.updateTeams)
   // $('#clear-data').on('click', authEvents.onClearTeams) // .hide()
 
   $('#change-password-form').hide()
