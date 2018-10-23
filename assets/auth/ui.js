@@ -71,6 +71,14 @@ const signOutSuccess = function () {
   $('#content').hide()
   // $('#change-password-form').clear()
   $('#change-password-form').trigger('reset')
+  $('#sign-out-button').trigger('reset')
+  $('#count-games-button').trigger('reset')
+  $('#count-game-display').trigger('reset')
+  $('#get-data').trigger('reset')
+  $('#list-teams').trigger('reset')
+  $('#create-team').trigger('reset')
+  $('#clear-data').trigger('reset')
+  $('#content').html('')
 }
 
 const signOutFailure = function () {
