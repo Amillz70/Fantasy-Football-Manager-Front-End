@@ -1,110 +1,67 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# browser-template
+##
+## Link to Backend Repo
+https://github.com/Amillz70/Fantasy-Football-Manager
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+## Link to Frontend Repo
+https://github.com/Amillz70/Fantasy-Football-Manager-Front-End
 
-## Installation
+## Link to Deployed Site
+Frontend of site:
+https://amillz70.github.io/Fantasy-Football-Manager-Front-End/
 
-1. [Download](../../archive/master.zip) this template.
-1. Move to the `wdi/projects` directory, then unzip the template directory with
-    `unzip /Users/<user-name>/Downloads/browser-template-master.zip`.
-1. Rename the template directory from `browser-template-master` to
-    `<project-name>-client`.
-1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace all instances of `ga-wdi-boston.browser-template` with the name of
-    your project.
-1. Move into the new project and `git init`.
-1. Add all of the files in your project with the command `git add --all`.
-      - **Note: This is the only time you should run this command!**
-1. Commit all of your files with the command `git commit`.
-      - Your commit title should read `Initial commit`.
-1. Install dependencies with `npm install`.
-1. Create a new repository on [github.com](https://github.com),
-    _not GitHub Enterprise_.
-1. Name the new repository with the same name used on Step 3.
-1. Follow the instructions on your new repository's setup page. For details on
-   how to push to Github, refer to the section on Github entitled "…or push an existing
-   repository from the command line." Further documentation can be found [here](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).
+## Backend of site:
+https://floating-plateau-43011.herokuapp.com
 
-## Structure
 
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/app.js`](assets/scripts/app.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
+## User Stories
 
-Developers should set `apiUrls.production` and `apiUrls.development` in
-[`assets/scripts/config.js`](assets/scripts/config.js).  With
-`apiUrls` set, developers may rely on `apiUrl` as the base for API
-URLs.
+As a user, I want to sign up, sign in, sign out, and change my password.
+As a user I want to add a name to my team.
+As a user I want to delete a team.
+As a user I want to update my team's name.
+As a user I want to see what player is on what team.
 
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss). Bootstrap version 3 is
-included in this template.
+## Adam's Fantasy Football Manager Description
+For my second project for the second project for my Web Developers Immersive at General Assembly, I decided to make a Fantasy Football Manager. Our criteria for this project was that it had to be a full-stack application with a front-end and back-end, and we needed to create the back-end as well. I wanted to work with something that could be small to start, but could be expanded and scale out into something, theoretically, massive. I have been playing fantasy football the past few years with my father and decided that it was something that could expand into something with a lot of moving parts.
 
-Developers should use [getFormFields](get-form-fields.md) to retrieve form data
-to send to an API.
+To start my project, I decided to make two tables, one for user and one for team. The user could have multiple teams, but each team could only have one user. My first step was to link my local back end repository to a Github repository. After that I decided to generate a scaffold to start to create my backend.I then went through the files created from the scaffold and made sure everything was in place. Once I was sure everything was in place, I created the relationship between user and teams that I mentioned above. Then I migrated the files to ensure that relationship was in place.
 
-To deploy a browser-template based SPA, run `grunt deploy`.
+It was about here where I decided to switch over and start work on the front-end. I found a frontend template I had previously used for my last project, a Tic Tac Toe game, and used that as my starting point. I removed anything I did not need from that last project then linked the repository to my backend that I created on heroku. From there I added basic HTML as well as an app.js, events.js, ui.js, and api.js files. I then added similar Sign Up, Sign In, Sign Out, and Change Password functionality from the previous project. Once I was sure that those worked I decided to go back to the backend.
 
-## Adding Images
+I changed my backend team controller to a Protected Controller because I don't want other users seeing what another using is doing. After making sure once again that the user/team relationship was set, I returned to my front end to work on the CRUD requests for team.
 
-To add images to your project, you must store them in the `public` directory.
-To use the image in HTML or CSS, write the path to the image like this:
+I started by making a get request for teams. I realized along the way I could not test this until I created a team or more. So I switched to working on my create team. It was at about this time that I decided to implement handlebars into my code as a way to more easily structure my requests. I created a team-listing.handlebars file and added what I needed to that file, app.js, event.js, and ui.js to make it work with my code. Once handlebars worked I was able to create and get teams. Next was clear and this gave me some trouble. I need to fix some of the events code around so that clear only worked when the button was clicked. The update was the hardest to implement, but after many failed attempts I was able to have a functional table that could create a team, get all teams, delete a team, and update a team. At this point I was uncertain if this hit minimum viable product and to be safe I created another request to get a single team based on it's ID number.
 
-```html
-<img src="public/cat.jpg">
-```
-or
-```css
-#my-cool-div {
-  background-image: url('public/cat.jpg')
-}
-```
+Compared to the first project we did, this one seemed to be more manageable for me. I had a better plan before I touched a line of code as well as taking my time to whiteboard before I began. I still had some trouble along the way, but I feel much more confident in my code this time around than last time even though this is a tougher project. I still have a long way to go before I consider this project "done", but this process seems to be getting better for me on my path to become a developer.
 
-Note that there's no `./` or `/` in front of `public/filename.jpg`.
+## Link to Backend Repo
+https://github.com/Amillz70/Fantasy-Football-Manager
 
-## Adding Fonts
+## Link to Frontend Repo
+https://github.com/Amillz70/Fantasy-Football-Manager-Front-End
 
-To add custom fonts to your app, you can either use a CDN like Google Fonts, or
-you can download the fonts and save them in the `public` directory. If you use
-the former method, follow the directions on the website providing the fonts.
+## Wireframe and ERD
 
-For local fonts, put the files in `public`, and then import and use them in a
-`.scss` file like this:
+https://imgur.com/I4NfARR  
+https://imgur.com/XMarMpc
 
-```scss
-@font-face {
-  font-family: 'Nature Beauty';
-  src: url('public/Nature-Beauty.ttf') format('truetype');
-}
+## Whiteboard
 
-.element-with-custom-font {
-  font-family: 'Nature Beauty';
-}
-```
+https://imgur.com/0DRGL6d
 
-## Tasks
+##Technology Used
+-JavaScript -HTML -CSS -Ruby -Rails -JSON -JQuery -AJAX -DOM -Handlebars
 
-Developers should run these often!
+##
+Additional features in the future
 
-- `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
-- `grunt make-standard`: reformats all your code in the JavaScript Standard Style
-- `grunt <server|serve|s>`: generates bundles, watches, and livereloads
-- `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
+In future versions I hope to add a player's table as well as a join table to allow users to add the players on their teams. After that feature, I hope to link up this project to a 3rd party API and allow the players to be updated from an outside source. Finally I would like to implement a rankings system to help the user pick which player to start, bench, trade, draft, ect.
 
 ## Additional Resources
 
-- [Modern Javascript Explained for Dinosaurs](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
-- [Making Sense of Front End Build Tools](https://medium.freecodecamp.org/making-sense-of-front-end-build-tools-3a1b3a87043b)
+
 
 ## [License](LICENSE)
 
