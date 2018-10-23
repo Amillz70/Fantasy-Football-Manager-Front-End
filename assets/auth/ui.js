@@ -86,42 +86,42 @@ const getTeamSuccess = function (data) {
   $('#content').html(showTeamsHtml)
   $('.update-form').on('submit', (e) => {
     e.preventDefault()
-    console.log('update teams')
+    // console.log('update teams')
   })
 }
 
 const getTeamFailure = function () {
-  $('display-message').html('Something wwent wrong with server')
-  $('display-message').css('color', 'red')
+  $('#second-display-message').html('Something wwent wrong with server')
+  $('#second-display-message').css('color', 'red')
 }
 
-const createTeamsSuccess = function () {
-  $('#list-teams').html('Create Team test')
+const createTeamSuccess = function () {
+  $('#second-display-message').html('Created Team')
   // const showAllTeams =
 }
 
-const createTeamsFailure = function () {
-  $('#list-teams').html('Create Team failed')
-  $('#list-teams').css('color', 'red')
+const createTeamFailure = function () {
+  $('#second-display-message').html('Create Team failed')
+  $('#second-display-message').css('color', 'red')
 }
 
-const clearTeamsSuccess = function () {
-  $('#display-message').html('Deleted team')
+const clearTeamSuccess = function () {
+  $('#second-display-message').html('Deleted team')
 }
 
-const clearTeamsFailure = function () {
-  $('#list-teams').html('Failed to Delete Team')
-  $('#list-teams').css('color', 'red')
+const clearTeamFailure = function () {
+  $('#second-display-message').html('Failed to Delete Team')
+  $('#second-display-message').css('color', 'red')
 }
 
 const updateTeamSuccess = function () {
-$('#list-teams').html('Updated team')
+$('#second-display-message').html('Updated team')
 $('#get-data').click()
 }
 
 const updateTeamFailure = function () {
-  $('#list-teams').html('Failed to Update Team')
-  $('#list-teams').css('color', 'red')
+  $('#second-display-message').html('Failed to Update Team')
+  $('#second-display-message').css('color', 'red')
 }
 
 module.exports = {
@@ -135,10 +135,10 @@ module.exports = {
   signOutFailure,
   getTeamSuccess,
   getTeamFailure,
-  createTeamsSuccess,
-  createTeamsFailure,
-  clearTeamsSuccess,
-  clearTeamsFailure,
+  createTeamSuccess,
+  createTeamFailure,
+  clearTeamSuccess,
+  clearTeamFailure,
   updateTeamSuccess,
   updateTeamFailure
 }

@@ -68,7 +68,7 @@ const updateTeams = function (event) {
   event.preventDefault()
   const id = $(event.target).attr('data-id')
   const data = getFormFields(event.target)
-  console.log(data)
+  // console.log(data)
 
   // if ($(event.target).attr('class') === 'update-team-button') {
   api.updateTeams(id, data)
