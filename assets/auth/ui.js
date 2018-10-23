@@ -80,6 +80,7 @@ const signOutSuccess = function () {
   $('#list-teams').trigger('reset')
   $('#create-team').trigger('reset')
   $('#clear-data').trigger('reset')
+  $('#get-team').trigger('reset')
   $('#content').html('')
 }
 
