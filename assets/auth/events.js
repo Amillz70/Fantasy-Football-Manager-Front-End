@@ -41,13 +41,13 @@ const onGetTeams = function () {
     .catch(ui.getTeamsFailure)
 }
 
-const onGetTeam = function (event) {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  api.getTeam(data)
-    .then(ui.getTeamSuccess)
-    .catch(ui.getTeamFailure)
-}
+// const onGetTeam = function (event) {
+//   event.preventDefault()
+//   const data = getFormFields(event.target)
+//   api.getTeam(data)
+//     .then(ui.getTeamSuccess)
+//     .catch(ui.getTeamFailure)
+// }
 
 const onCreateTeam = function (event) {
   event.preventDefault()
@@ -87,7 +87,7 @@ const updateTeams = function (event) {
 
 const addHandlers = () => {
   $('#get-data').on('click', onGetTeams)
-  $('#get-team').on('submit', onGetTeam)
+  // $('#get-team').on('submit', onGetTeam)
   $('#create-team').on('submit', onCreateTeam)
   $('#content').on('click', '.clear-team-button', onClearTeam)
   $('#content').on('submit', '.update-form', updateTeams)

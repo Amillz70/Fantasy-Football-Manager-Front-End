@@ -49,16 +49,16 @@ const getTeams = function () {
   })
 }
 
-const getTeam = function (teamData) {
-  return $.ajax({
-    url: config.apiUrl + `/teams/${teamData.team.id}`,
-    method: 'GET',
-    data: teamData,
-    headers: {
-      Authorization: `Token token=${store.user.token}`
-    }
-  })
-}
+// const getTeam = function (teamData) {
+//   return $.ajax({
+//     url: config.apiUrl + `/teams/${teamData.team.id}`,
+//     method: 'GET',
+//     data: teamData,
+//     headers: {
+//       Authorization: `Token token=${store.user.token}`
+//     }
+//   })
+// }
 
 const createTeams = function (data) {
   return $.ajax({
@@ -102,7 +102,7 @@ module.exports = {
   changePassword,
   signOut,
   getTeams,
-  getTeam,
+  // getTeam,
   createTeams,
   clearTeams,
   updateTeams

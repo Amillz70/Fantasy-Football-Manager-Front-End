@@ -97,6 +97,16 @@ const getTeamsSuccess = function (data) {
   $('#content').html(showTeamsHtml)
   $('.update-form').on('submit', (e) => {
     e.preventDefault()
+    // $('#second-display-message').html(`${data.teams.length}`)
+    $('#change-password-form').trigger('reset')
+    $('#sign-out-button').trigger('reset')
+    $('#count-games-button').trigger('reset')
+    $('#count-game-display').trigger('reset')
+    $('#get-data').trigger('reset')
+    $('#list-teams').trigger('reset')
+    $('#create-team').trigger('reset')
+    $('#clear-data').trigger('reset')
+    $('#get-team').trigger('reset')
     // console.log('update teams')
   })
 }
@@ -106,21 +116,21 @@ const getTeamsFailure = function () {
   $('#second-display-message').css('color', 'red')
 }
 
-const getTeamSuccess = function (data) {
-  // console.log(data)
-  // const showTeamsHtml = showTeamsTemplate({ teams: data.teams })
-  store.team = data.team
-  $('#content').html(`${store.team.name} is found`)
-  $('.update-form').on('submit', (e) => {
-    e.preventDefault()
-    // console.log('update teams')
-  })
-}
-
-const getTeamFailure = function () {
-  $('#second-display-message').html('Something went wrong with server')
-  $('#second-display-message').css('color', 'red')
-}
+// const getTeamSuccess = function (data) {
+//   // console.log(data)
+//   // const showTeamsHtml = showTeamsTemplate({ teams: data.teams })
+//   store.team = data.team
+//   $('#content').html(`${store.team.name} is found`)
+//   $('.update-form').on('submit', (e) => {
+//     e.preventDefault()
+//     // console.log('update teams')
+//   })
+// }
+//
+// const getTeamFailure = function () {
+//   $('#second-display-message').html('Something went wrong with server')
+//   $('#second-display-message').css('color', 'red')
+// }
 
 const createTeamSuccess = function () {
   $('#second-display-message').html('Created Team')
@@ -162,8 +172,8 @@ module.exports = {
   signOutFailure,
   getTeamsSuccess,
   getTeamsFailure,
-  getTeamSuccess,
-  getTeamFailure,
+  // getTeamSuccess,
+  // getTeamFailure,
   createTeamSuccess,
   createTeamFailure,
   clearTeamSuccess,
