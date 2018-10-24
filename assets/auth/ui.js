@@ -97,7 +97,8 @@ const getTeamsSuccess = function (data) {
   $('#content').html(showTeamsHtml)
   $('.update-form').on('submit', (e) => {
     e.preventDefault()
-    // $('#second-display-message').html(`${data.teams.length}`)
+    // console.log(data.teams.length)
+    // $('#list-teams').html(`${data.teams.length}`)
     $('#change-password-form').trigger('reset')
     $('#sign-out-button').trigger('reset')
     $('#count-games-button').trigger('reset')
@@ -134,6 +135,7 @@ const getTeamsFailure = function () {
 
 const createTeamSuccess = function () {
   $('#second-display-message').html('Created Team')
+  $('#create-team').trigger('reset')
   // const showAllTeams =
 }
 
