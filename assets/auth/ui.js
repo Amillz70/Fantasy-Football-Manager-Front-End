@@ -95,10 +95,10 @@ const getTeamsSuccess = function (data) {
   // $('#list-teams').css('color', 'blue')
   const showTeamsHtml = showTeamsTemplate({ teams: data.teams })
   $('#content').html(showTeamsHtml)
+  $('#second-display-message').html(`You have ${data.teams.length} teams.`)
   $('.update-form').on('submit', (e) => {
     e.preventDefault()
     // console.log(data.teams.length)
-    // $('#list-teams').html(`${data.teams.length}`)
     $('#change-password-form').trigger('reset')
     $('#sign-out-button').trigger('reset')
     $('#count-games-button').trigger('reset')
@@ -146,6 +146,21 @@ const createTeamFailure = function () {
 
 const clearTeamSuccess = function () {
   $('#second-display-message').html('Deleted team')
+  $('#clear-team-button').trigger('reset')
+  // if () {
+  //
+  // } else{
+  //
+  // }
+  // $('#change-password-form').trigger('reset')
+  // $('#sign-out-button').trigger('reset')
+  // $('#count-games-button').trigger('reset')
+  // $('#count-game-display').trigger('reset')
+  // $('#get-data').trigger('reset')
+  // $('#list-teams').trigger('reset')
+  // $('#create-team').trigger('reset')
+  // $('#clear-data').trigger('reset')
+  // $('#get-team').trigger('reset')
 }
 
 const clearTeamFailure = function () {

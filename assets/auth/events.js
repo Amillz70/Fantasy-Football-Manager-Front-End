@@ -65,6 +65,7 @@ const onClearTeam = function (event) {
   // console.log(event.target)
   // const getTeamElement = '[data-id=' + id + ']'
   // $(getTeamElement).empty()
+
   if ($(event.target).attr('class') === 'clear-team-button') {
     api.clearTeams(id)
       .then(ui.clearTeamSuccess)
