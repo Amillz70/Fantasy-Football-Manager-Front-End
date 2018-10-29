@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Time for Football!</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Adam's Fantasy Football Manager</h1>
+<h3 id="display-message"></h3>
+<h3 id="second-display-message"></h3>
+<!-- <h3 id="end-game-message"></h3> -->
+
+<form id="sign-up-form" class="hidden-sign-out">
+  <legend> Sign Up! </legend>
+  <input required placeholder="Enter Email" name="credentials[email]" type="email"/>
+  <input required placeholder="Enter Password" name="credentials[password]" type="password"/>
+  <input required placeholder="Confirm Password" name="credentials[password_confirmation]" type="password"/>
+  <input type="submit" />
+      </form>
+  <br>
+  <form id="sign-in-form" class="hidden-sign-out">
+    <legend> Sign In! </legend>
+    <input required placeholder="Enter Email" name="credentials[email]" type="email"/>
+    <input required placeholder="Enter Password" name="credentials[password]" type="password"/>
+    <input type="submit" />
+       </form>
+    <br>
+    <form id="change-password-form" class="hidden-sign-in">
+      <legend> Change Password? </legend>
+      <input required placeholder="Old Password" name="passwords[old]" type="password"/>
+      <input required placeholder="New Password" name="passwords[new]" type="password"/>
+      <input type="submit" />
+       </form>
+      <br>
+
+      <button id="sign-out-button"> Sign Out </button>
+      <br>
+
+      <!-- <form id="clear-data">
+        <legend> Delete a Team? </legend>
+        <input required placeholder="Team Name" name="team[name]" type="name"/>
+        <input type="submit" />
+      </form> -->
+
+      <form id="create-team">
+        <legend> Make a New Team! </legend>
+        <input required placeholder="Team Name" name="team[name]" type="name"/>
+        <input type="submit" value="Submit" class="btn btn-default"/>
+      </form>
+
+      <button id="get-data"> Get Teams </button>
+      <br>
+
+      <!-- <form id="get-team">
+        <legend> Get One Team! </legend>
+        <input required placeholder="Team Id" name="team[id]" type="name"/>
+        <input type="submit" value="Submit" class="btn btn-default"/>
+      </form> -->
+
+
+
+      <div id="content" class="list-content"></div>
+      <h3 id="list-teams"></h3>
+      <br>
+
+    </body>
+</html>
