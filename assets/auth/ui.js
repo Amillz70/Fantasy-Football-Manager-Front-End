@@ -95,7 +95,7 @@ const getTeamsSuccess = function (data) {
   // $('#list-teams').css('color', 'blue')
   const showTeamsHtml = showTeamsTemplate({ teams: data.teams })
   $('#content').html(showTeamsHtml)
-  $('#second-display-message').html(`You have ${data.teams.length} teams.`)
+  $('#list-teams').html(`You have ${data.teams.length} teams.`)
   $('.update-form').on('submit', (e) => {
     e.preventDefault()
     // console.log(data.teams.length)
