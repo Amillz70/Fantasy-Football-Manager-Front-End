@@ -147,11 +147,7 @@ const createTeamFailure = function () {
 const clearTeamSuccess = function () {
   $('#second-display-message').html('Deleted team')
   $('#clear-team-button').trigger('reset')
-  // if () {
-  //
-  // } else{
-  //
-  // }
+
   // $('#change-password-form').trigger('reset')
   // $('#sign-out-button').trigger('reset')
   // $('#count-games-button').trigger('reset')
@@ -160,7 +156,7 @@ const clearTeamSuccess = function () {
   // $('#list-teams').trigger('reset')
   // $('#create-team').trigger('reset')
   // $('#clear-data').trigger('reset')
-  // $('#get-team').trigger('reset')
+  // $('#get-data').trigger('reset')
 }
 
 const clearTeamFailure = function () {
